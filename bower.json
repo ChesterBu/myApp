@@ -1,0 +1,16 @@
+  "name": "Blog",
+  "homepage": "https://github.com/ChesterBu/myApp",
+  "authors": [
+    "ChesterBu"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
