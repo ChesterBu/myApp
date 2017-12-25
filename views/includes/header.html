@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        <%= title %>
-    </title>
+    <title>Title</title>
     <link rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.css'/>
 </head>
 
@@ -24,13 +22,40 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <% if(!user){
+                %>
                 <li class="active"><a href="/users/reg">注册<span class="sr-only">(current)</span></a></li>
                 <li><a href="/users/login">登录</a></li>
-                <li><a href="/article/add">发表文章</a></li>
-                <li><a href="/users/logout">退出</a></li>
+                <%
+                } else{
+                %>
+                    <li><a href="/article/add">发表文章</a></li>
+                    <li><a href="/users/logout">退出</a></li>
+                <%
+                }
+                %>
+
+
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>
+<%
+if(success){
+%>
+<div class="alert alert-success" role="alert"><%= success %></div>
+<%
+}
+%>
+
+<%
+if(error){
+%>
+<div class="alert alert-danger" role="alert"><%= error %></div>
+<%
+}
+%>
+
